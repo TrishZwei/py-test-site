@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<h1>Login</h1>
+	<form method="post" action="">
+		<div class="form-group">
+			<label for="email">Email</label>
+			<input id="email" type="email" name="email" class="form-control" value={{request.form.email}}>
+			<!-- why no "" around the jinja variables? -->
+		</div>	
+		<div class="form-group">
+		<label for="password">Password</label>
+			<input id="password" type="password" name="password" class="form-control" value={{request.form.password}}>
+		</div>	
+		<span class="icon eye show"> Show Password</span><br>
+		<button type="submit" value="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+<script type="text/javascript">
+	show.addEventListener('click', function(){
+
+		//the keyword: this is the item that was clicked. this can be used in other context and can be tricky. Use with care.
+		if(this.classList == 'icon eye show'){
+		    this.classList = 'icon eye-slash show'; //sets the value of the classes
+		    this.textContent = ' Hide Password'
+		    pass.setAttribute('type', 'text'); //sets the type of input the password input box is.
+		}else{
+		    this.classList = 'icon eye show';
+		    pass.setAttribute('type', 'password');
+		    this.textContent = ' Show Password';
+		}
+
+	}) //end addEventListener
+
+
+</script>
+	        show.addEventListener('click', function(){
+
+            //the keyword: this is the item that was clicked. this can be used in other context and can be tricky. Use with care.
+            if(this.classList == 'icon eye show'){
+                this.classList = 'icon eye-slash show'; //sets the value of the classes
+                this.textContent = ' Hide Password'
+                pass.setAttribute('type', 'text'); //sets the type of input the password input box is.
+            }else{
+                this.classList = 'icon eye show';
+                pass.setAttribute('type', 'password');
+                this.textContent = ' Show Password';
+            }
+
+        }) //end addEventListener
+
+{% endblock %}

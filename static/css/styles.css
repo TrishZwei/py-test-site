@@ -1,0 +1,78 @@
+/*embeded styles from layout:*/
+body{
+	font-family: Verdana;
+}
+
+.button{
+	width: 200px;
+	height: 40px;
+	background-color: rgba(102,51,153,1);
+	line-height: 40px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	border: 1px solid purple;
+	border-radius: 8px;				
+}
+
+.button:hover{
+	background-color: rgba(244, 244, 244, 1);
+	border: 1px solid purple;
+	transition-duration: 1s;
+	color: rgba(102,51,153,1)
+}
+.container{
+	margin: 3.5em auto 0;
+}
+
+/*embeded styles from home:*/
+body.home{
+  		color: white;
+	}
+
+.home #vanta-test {
+  position: absolute;
+  display: block;
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.home h1{
+  color: #45F2E7;
+  margin-top: 2em; 
+}
+
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon.eye::before{
+  font-family: "fontAwesome";
+  font-weight: 900;
+  content: "\f06e";
+}
+
+.icon.eye-slash::before{
+  font-family: "fontAwesome";
+  font-weight: 900;
+  content: "\f070";
+}
+
+.icon.show{
+    margin: 0 auto 1.8em;
+    cursor: pointer;
+}
+
+.no-js .icon.show{
+  display: none;
+}
